@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ChevronRight, Phone, Wifi, FileText, BarChart3, ArrowUpRight, ArrowDownRight, HelpCircle, MessageSquareText, CircleCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -29,7 +28,6 @@ const Dashboard = () => {
   return (
     <div className="space-y-8">
       <div className="grid gap-6 md:grid-cols-2">
-        {/* Wallet Balance Card */}
         <Card className="bg-slate-800 text-white">
           <CardContent className="pt-6 pb-8 flex flex-col items-center justify-center">
             <h3 className="mb-4 text-lg font-medium text-center">My Wallet</h3>
@@ -42,7 +40,6 @@ const Dashboard = () => {
           </CardContent>
         </Card>
 
-        {/* Account Details Card */}
         <Card>
           <CardContent className="pt-6 pb-8">
             <h3 className="mb-4 text-lg font-medium">Pay for immediate funding via</h3>
@@ -81,7 +78,6 @@ const Dashboard = () => {
         </Card>
       </div>
 
-      {/* Top-Up Services */}
       <Card>
         <CardHeader>
           <CardTitle>Top-Up Services</CardTitle>
@@ -160,7 +156,6 @@ const Dashboard = () => {
       </Card>
 
       <div className="grid gap-6 md:grid-cols-2">
-        {/* Recent Transactions */}
         <Card>
           <CardHeader className="pb-0">
             <CardTitle className="text-lg">Recent Transactions</CardTitle>
@@ -194,7 +189,6 @@ const Dashboard = () => {
           </CardContent>
         </Card>
 
-        {/* Help & Support Center */}
         <Card>
           <CardHeader>
             <CardTitle className="text-lg">Help & Support Center</CardTitle>
@@ -231,9 +225,8 @@ const Dashboard = () => {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        {/* Airtime Purchase Chart */}
-        <Card>
-          <CardHeader className="pb-0 flex flex-row items-center justify-between space-y-0">
+        <Card className="w-full">
+          <CardHeader className="pb-0 flex flex-col space-y-0 md:flex-row md:items-center md:justify-between">
             <div>
               <CardTitle className="text-lg">Airtime Purchase</CardTitle>
               <div className="flex items-center mt-1">
@@ -244,7 +237,7 @@ const Dashboard = () => {
                 <span className="ml-2 text-gray-500 text-xs">in 6 months</span>
               </div>
             </div>
-            <div className="flex space-x-2">
+            <div className="flex gap-1 mt-4 md:mt-0 overflow-x-auto md:overflow-visible">
               <Button variant="outline" size="sm" className="text-xs h-7">1 W</Button>
               <Button variant="outline" size="sm" className="text-xs h-7">1 M</Button>
               <Button variant="outline" size="sm" className="text-xs h-7">6 M</Button>
@@ -253,7 +246,7 @@ const Dashboard = () => {
             </div>
           </CardHeader>
           <CardContent className="pt-4">
-            <div className="h-[300px]">
+            <div className="h-[300px] w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart
                   data={data}
@@ -291,9 +284,8 @@ const Dashboard = () => {
           </CardContent>
         </Card>
 
-        {/* Stats Cards */}
         <div className="space-y-6">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Card>
               <CardContent className="p-4">
                 <div className="flex items-start justify-between">
@@ -331,7 +323,7 @@ const Dashboard = () => {
             </Card>
           </div>
           
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Card>
               <CardContent className="p-4">
                 <div className="flex items-start justify-between">
