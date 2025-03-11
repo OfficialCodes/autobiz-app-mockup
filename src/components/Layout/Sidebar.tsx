@@ -22,8 +22,8 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="h-screen w-64 bg-sidebar flex flex-col">
-      <div className="p-6">
+    <div className="h-screen w-64 bg-[#273140] flex flex-col overflow-y-auto">
+      <div className="p-6 border-b border-gray-700">
         <h1 className="text-white text-xl font-medium">Autobiz App</h1>
       </div>
       
